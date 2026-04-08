@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import {
-  allProduct,
-  products,
-  whyChooseUs,
   whyBuyersChoose,
-  faqs,
+  productsPaperNapkin,
+  allProductPaperNapkin,
+  whyChooseUsPaperNapkin,
+  testimonialPaperNapkin,
+  faqsPaperNapkin,
 } from "@/data";
 import {
   BookCheck,
@@ -17,59 +18,56 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 
-const Home = () => {
+const PaperNapkin = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
     <div>
-      {/* hero  */}
+      {/* hero done  */}
       <section className="bg-[#F2A99B] flex flex-col gap-1 items-center px-2 py-5 lg:py-8">
         <p className="font-bebas text-2xl text-white md:text-4xl">
-          Need Reliable Supply of
+          Searching for the Best
         </p>
         <p className="font-teko text-4xl text-white md:text-6xl">
-          FACIAL TISSUE PRODUCTS?
+          Paper Napkin in Delhi?
         </p>
         <p className="font-open text-center text-white md:text-xl ">
-          Connect directly with Matrix Tissue – your trusted face tissue
-          manufacturer in Delhi for bulk and wholesale requirements.
+          Get high-quality, hygienic, and affordable paper napkins for hotels,
+          restaurants, and bulk use.
         </p>
 
         <div className="grid grid-cols-3 mt-5 gap-3 text-white md:gap-8 md:mt-10">
           <div className="flex flex-col items-center gap-1 ">
             <BookCheck className="md:h-9 md:w-9" />
-            <p className="md:text-xl">SUBMIT ENQUIRY</p>
+            <p className="md:text-xl">SEND REQUIREMENT</p>
           </div>
           <div className="flex flex-col items-center gap-1 text-center">
             <IndianRupee className="md:h-9 md:w-9" />
-            <p className="md:text-xl">RECEIVE BEST PRICES</p>
+            <p className="md:text-xl">GET BEST PRICES</p>
           </div>
           <div className="flex flex-col items-center gap-1 ">
             <Package className="md:h-9 md:w-9" />
-            <p className="md:text-xl">GET QUICK DELIVERY</p>
+            <p className="md:text-xl">QUICK DELIVERY</p>
           </div>
         </div>
 
         <div className="flex gap-5 mt-3 md:gap-14 pb-4">
           <button className="bg-red-500 hover:bg-red-600 px-5 py-1 rounded text-white text-xl md:scale-115">
-            Request Quote
+            Get Free Quote
           </button>
-          <a
-            href="tel:8810540823"
-            className="bg-red-400 hover:bg-red-500 px-5 py-1 rounded text-white text-xl md:scale-115"
-          >
-            Call Now
-          </a>
+          <button className="bg-red-400 hover:bg-red-500 px-5 py-1 rounded text-white text-xl md:scale-115">
+            Contact Us
+          </button>
         </div>
       </section>
 
-      {/* product section  */}
+      {/* product section done */}
       <section className="px-3 py-10 md:py-14 lg:px-20 flex flex-col items-center lg:py-8">
         <p className="text-3xl md:text-5xl font-bebas text-gray-900 mb-8 text-center tracking-wide">
-          Send Your Enquiry Directly to Matrix Tissue
+          Our Paper Napkin Collection
         </p>
         <div className="grid grid-cols-2 gap-2 mt-5 md:grid-cols-4 lg:gap-6">
-          {products.map((item, idx) => (
+          {productsPaperNapkin.map((item, idx) => (
             <div
               key={idx}
               className=" flex flex-col items-center overflow-hidden rounded-lg border shadow hover:shadow-xl duration-300"
@@ -98,77 +96,78 @@ const Home = () => {
         </button>
       </section>
 
-      {/* cta  */}
+      {/* cta done  */}
       <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-8">
         {/* Bulk Supply CTA */}
         <div className="mt-16 w-full max-w-5xl bg-gradient-to-r from-red-700 to-red-900 rounded-3xl p-8 md:p-12 text-center text-white shadow-xl">
           <h3 className="text-3xl md:text-5xl font-bebas mb-4 tracking-wide">
-            Need Bulk Facial Tissue Supply?
+            Get Best Price for Paper Napkins
           </h3>
           <p className="text-lg md:text-xl mb-8 text-red-50 max-w-3xl mx-auto">
-            Partner with a reliable facial tissue manufacturer in Delhi NCR for
-            consistent quality and timely delivery.
+            Looking for high-quality paper napkins in bulk?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="w-full sm:w-auto bg-white text-red-700 font-bold py-4 px-10 rounded-xl text-lg hover:bg-gray-100 transition-colors shadow-lg">
-              Get Bulk Pricing
+              Get Free Quote
             </button>
             <a
-              href="tel:8810540823"
-              className="bg-red-400 hover:bg-red-500 px-5 py-1 rounded text-white text-xl md:scale-115"
+              href="https://wa.link/rt47ko"
+              target="_blank"
+              className="w-full sm:w-auto bg-transparent border-2 border-white text-white font-bold py-4 px-10 rounded-xl text-lg hover:bg-white/10 transition-colors"
             >
-              Call Now
+              Instant WhatsApp Quote Available
             </a>
           </div>
         </div>
       </section>
 
-      {/* third section  */}
+      {/* third section done */}
       <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-8">
         <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-8 text-center tracking-wide">
-          Leading Facial Tissue in Delhi
+          Paper Napkin in Delhi
         </h2>
         <div className="max-w-5xl text-center space-y-6">
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-            Matrix Tissue began its journey in 2008 under the visionary
-            leadership of{" "}
-            <span className="font-semibold">Mr. Praveen Bhagwat</span>, with a
-            mission to redefine quality in the tissue industry. Today, we are
-            recognized as a trusted{" "}
-            <span className="font-semibold">
-              facial tissue manufacturer in Delhi
+          <p className="text-lg md:text-2xl text-gray-700 leading-relaxed">
+            Matrix Tissue started its journey in 2008 under the leadership of
+            Mr. Praveen Bhagwat with a vision to deliver high-quality hygiene
+            products. Today, we are a recognized{" "}
+            <span className="font-bold">
+              paper napkin manufacturer in Delhi
             </span>
-            , offering premium-quality facial tissue products designed for
-            superior softness, strength, and hygiene.
+            , offering a wide range of premium{" "}
+            <span className="font-bold">paper napkin products</span> known for
+            their softness, strength, and superior absorbency. Our products are
+            widely used across restaurants, hotels, offices, and catering
+            businesses, making us a reliable choice for{" "}
+            <span className="font-bold">paper napkin supply in Delhi.</span>
           </p>
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-            Our range of facial tissue in Delhi caters to households, offices,
-            hotels, and healthcare sectors, ensuring comfort and reliability in
-            every use. With years of expertise, Matrix Tissue has established
-            itself as a dependable{" "}
-            <span className="font-semibold">
-              facial tissue supplier in Delhi NCR
-            </span>
-            , delivering high-quality solutions for both retail and bulk
-            requirements.
-          </p>
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-            Our commitment to innovation and consistent quality allows us to
-            provide soft facial tissue, premium facial tissue, and customized
-            solutions that meet modern hygiene standards. We continue to focus
-            on delivering the best facial tissue products in Delhi, making us a
-            preferred choice for customers seeking quality and value.
+
+          <p className="text-lg md:text-2xl text-gray-700 leading-relaxed">
+            With years of experience and a strong focus on quality, Matrix
+            Tissue has become a trusted{" "}
+            <span className="font-bold">paper napkin supplier in Delhi</span>{" "}
+            for both retail and bulk requirements. We specialize in delivering{" "}
+            <span className="font-bold">customized paper napkins,</span>{" "}
+            eco-friendly solutions, and consistent bulk supply to meet diverse
+            business needs. Our commitment to hygiene, timely delivery, and
+            competitive pricing makes us a preferred partner for businesses
+            looking for the best
+            <span className="font-bold">paper napkin in Delhi.</span>
           </p>
         </div>
       </section>
 
-      {/* fouth section  */}
+      {/* fouth section done  */}
       <section className="px-3 py-10 md:py-14 lg:px-20 flex flex-col items-center lg:py-8">
-        <p className="text-3xl md:text-5xl font-bebas text-gray-900 mb-8 text-center tracking-wide">
-          Complete Range of Facial Tissue Products
+        <p className="text-3xl md:text-5xl font-bebas text-gray-900 mb-3 text-center tracking-wide">
+          Best-Selling Paper Napkins in Delhi
+        </p>
+        <p className="text-xl md:text-2xl font-semibold text-red-700 mb-6">
+          Explore our most popular paper napkin products trusted by businesses
+          across Delhi NCR for quality and reliability.
         </p>
         <div className="grid grid-cols-2 gap-2 mt-5 md:grid-cols-4 lg:gap-6">
-          {allProduct.map((item, idx) => (
+          {allProductPaperNapkin.map((item, idx) => (
             <div
               key={idx}
               className=" flex flex-col items-center overflow-hidden rounded-lg border shadow hover:shadow-xl duration-300"
@@ -192,25 +191,26 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Why Choose Section */}
+      {/* Why Choose Section done */}
       <section className="px-5 py-12 md:py-20 lg:px-24 bg-white flex flex-col items-center lg:py-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-2 tracking-wide">
-            Why Choose Matrix Tissue
+            Why Choose Our Paper Napkins
           </h2>
           <p className="text-xl md:text-2xl font-semibold text-red-700 mb-6">
-            Premium Facial Tissue, Trusted Quality
+            Quality You Can Trust, Supply You Can Rely On
           </p>
           <p className="max-w-4xl text-gray-600 text-lg md:text-xl leading-relaxed">
-            At Matrix Tissue, we go beyond just manufacturing facial tissue. We
-            are committed to delivering exceptional value through quality,
-            consistency, and a customer-first approach, making us a reliable
-            facial tissue supplier in Delhi.
+            At Matrix Tissue, we go beyond just supplying{" "}
+            <span className="font-bold">paper napkins.</span> We focus on
+            delivering consistent quality, hygiene, and value, making us a
+            trusted{" "}
+            <span className="font-bold">paper napkin supplier in Delhi.</span>
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 w-full max-w-7xl">
-          {whyChooseUs.map((feature, index) => (
+          {whyChooseUsPaperNapkin.map((feature, index) => (
             <div
               key={index}
               className="flex flex-col items-center text-center p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
@@ -229,35 +229,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* cta section  */}
-      <section className="relative w-full py-20 md:py-32 flex items-center justify-center overflow-hidden lg:py-8">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/products/FT7-1-1.webp"
-            alt="Premium Facial Tissue"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-red-900/80" />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 text-center px-5 max-w-5xl text-white">
-          <h2 className="text-4xl md:text-7xl font-bebas mb-6 tracking-wider drop-shadow-md">
-            Searching for the Best Facial Tissue in Delhi?
-          </h2>
-          <p className="text-lg md:text-3xl mb-10 font-medium text-gray-100 max-w-3xl mx-auto">
-            Connect with Matrix Tissue for premium quality, competitive pricing,
-            and reliable bulk supply.
-          </p>
-          <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-12 rounded-xl text-xl md:text-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
-            Get Free Quote
-          </button>
-        </div>
-      </section>
-
-      {/* why Buyer choose matrix tissue  */}
+      {/* why Buyer choose matrix tissue done*/}
       <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-8">
         <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-12 text-center tracking-wide">
           Why Buyers Choose Matrix Tissue
@@ -283,16 +255,16 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Also avaiable on  */}
+      {/* Also avaiable on  done */}
       <section className="px-5 py-12 md:py-20 lg:px-24 bg-white flex flex-col items-center lg:py-8">
         <div className="text-center ">
           <h2 className="text-3xl md:text-5xl font-bebas text-gray-900  tracking-wide">
             Also Available On
           </h2>
           <p className="text-xl md:text-2xl font-semibold text-red-700 mb-6">
-            Matrix Tissue is proudly listed on leading B2B platforms, making it
-            easier for buyers to connect with a trusted facial tissue
-            manufacturer in Delhi.
+            Matrix Tissue is proudly listed on leading platforms, making it easy
+            to connect with a trusted{" "}
+            <span className="font-bold">paper napkin supplier in Delhi.</span>
           </p>
         </div>
 
@@ -318,45 +290,45 @@ const Home = () => {
         </div>
       </section>
 
-      {/* premium facial tissue collection  */}
+      {/* premium facial tissue collection done */}
       <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-8">
         <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-6 text-center tracking-wide">
-          Premium Facial Tissue Collection
+          Premium Paper Napkin Collection
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 w-full max-w-7xl">
           {[
             {
-              title: "Facial Tissue in Delhi",
-              desc: "Premium Box Facial Tissue – Soft & Absorbent Collection",
+              title: "Paper Napkin in Delhi",
+              desc: "Premium White Paper Napkin – Soft & Absorbent Collection",
             },
             {
-              title: "Facial Tissue Supplier in Delhi",
-              desc: "Pocket Facial Tissue – Travel-Friendly Hygiene Pack",
+              title: "Paper Napkin Supplier in Delhi",
+              desc: "Classic Color Paper Napkin – Stylish & Vibrant Range",
             },
             {
-              title: "Facial Tissue Manufacturer in Delhi",
-              desc: "Ultra Soft Facial Tissue – Gentle Care Collection",
+              title: "Paper Napkin Manufacturer in Delhi",
+              desc: "Cocktail Paper Napkin – Compact & Elegant Pack",
             },
             {
-              title: "Facial Tissue",
-              desc: "Multi-Ply Facial Tissue – Strong & Durable Range",
+              title: "Paper Napkin Products",
+              desc: "Dinner Paper Napkin – Strong & Durable Range",
             },
             {
-              title: "Facial Tissue in Delhi",
-              desc: "Eco-Friendly Facial Tissue – Sustainable Collection",
+              title: "Paper Napkin in Delhi NCR",
+              desc: "Eco-Friendly Paper Napkin – Sustainable Collection",
             },
             {
-              title: "Facial Tissue Manufacturer",
-              desc: "Customized Facial Tissue Packs – Private Label Solutions",
+              title: "Paper Napkin Manufacturer",
+              desc: "Customized Paper Napkins – Printed & Branding Solutions ",
             },
             {
-              title: "Facial Tissue Supplier in Delhi",
-              desc: "Premium Facial Tissue for Hotels & Offices",
+              title: "Paper Napkin Supplier in Delhi",
+              desc: "Premium Paper Napkins for Hotels & Restaurants",
             },
             {
-              title: "Facial Tissue in Delhi",
-              desc: "High Absorbency Facial Tissue – Commercial Use Pack",
+              title: "Bulk Paper Napkin in Delhi",
+              desc: "High Absorbency Paper Napkins – Commercial Use Pack ",
             },
           ].map((item, index) => (
             <div
@@ -381,10 +353,10 @@ const Home = () => {
         {/* Bulk Supply CTA */}
         <div className="mt-16 w-full max-w-5xl bg-gradient-to-r from-red-700 to-red-900 rounded-3xl p-8 md:p-12 text-center text-white shadow-xl">
           <h3 className="text-3xl md:text-5xl font-bebas mb-4 tracking-wide">
-            Need Bulk Facial Tissue Supply?
+            Need Bulk Paper Napkin Supply?
           </h3>
           <p className="text-lg md:text-xl mb-8 text-red-50 max-w-3xl mx-auto">
-            Partner with a reliable facial tissue manufacturer in Delhi NCR for
+            Partner with a reliable paper napkin manufacturer in Delhi NCR for
             consistent quality and timely delivery.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -401,55 +373,40 @@ const Home = () => {
         </div>
       </section>
 
+      {/* cta section done */}
+      <section className="relative w-full py-20 md:py-32 flex items-center justify-center overflow-hidden lg:py-8">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/products/FT7-1-1.webp"
+            alt="Premium Facial Tissue"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-red-900/80" />
+        </div>
+
+        <div className="relative z-10 text-center px-5 max-w-5xl text-white">
+          <h2 className="text-4xl md:text-7xl font-bebas mb-6 tracking-wider drop-shadow-md">
+            Need Bulk Paper Napkins at the Best Price?
+          </h2>
+          <p className="text-lg md:text-3xl mb-10 font-medium text-gray-100 max-w-3xl mx-auto">
+            Connect with Matrix Tissue today and get high-quality paper napkins
+            with fast delivery and unbeatable pricing.
+          </p>
+          <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-12 rounded-xl text-xl md:text-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
+            Request Quote Now
+          </button>
+        </div>
+      </section>
+
       {/* testimonial section  */}
       <section className="px-5 py-12 md:py-20 lg:px-24 bg-white flex flex-col items-center lg:py-8">
         <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-12 text-center tracking-wide">
-          What Our Clients Say
+          Trusted by Businesses Across Delhi NCR
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-7xl">
-          {[
-            {
-              quote:
-                "Matrix Tissue is a highly reliable facial tissue supplier in Delhi. The quality is consistently soft and perfect for our daily office use.",
-              author: "Corporate Client",
-            },
-            {
-              quote:
-                "We’ve been sourcing bulk facial tissue for our hotel chain, and their service is always on time with excellent pricing.",
-              author: "Hotel Manager",
-            },
-            {
-              quote:
-                "One of the best facial tissue manufacturers in Delhi NCR. The products are hygienic and ideal for healthcare environments.",
-              author: "Hospital Administrator",
-            },
-            {
-              quote:
-                "Their customized facial tissue packaging helped us build our brand presence. Highly professional team.",
-              author: "Retail Distributor",
-            },
-            {
-              quote:
-                "Premium quality facial tissue with great absorbency. Truly a dependable supplier for bulk requirements.",
-              author: "Business Owner",
-            },
-            {
-              quote:
-                "Fast delivery and consistent quality make Matrix Tissue our go-to facial tissue supplier in Delhi.",
-              author: "Office Admin",
-            },
-            {
-              quote:
-                "Soft, skin-friendly facial tissue products that meet our salon’s hygiene standards perfectly.",
-              author: "Salon Owner",
-            },
-            {
-              quote:
-                "Affordable pricing with top-notch quality. One of the most trusted facial tissue suppliers we’ve worked with.",
-              author: "Wholesale Buyer",
-            },
-          ].map((item, index) => (
+          {testimonialPaperNapkin.map((item, index) => (
             <div
               key={index}
               className="bg-gray-50 p-8 rounded-2xl border border-gray-100 flex flex-col justify-between hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative group"
@@ -471,11 +428,11 @@ const Home = () => {
       {/* Faq section  */}
       <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-8">
         <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-12 text-center tracking-wide">
-          Frequently Asked Questions – Face Tissue
+          Frequently Asked Questions – Paper Napkin
         </h2>
 
         <div className="w-full max-w-4xl space-y-4">
-          {faqs.map((faq, index) => {
+          {faqsPaperNapkin.map((faq, index) => {
             const isOpen = activeIndex === index;
             return (
               <div
@@ -516,7 +473,7 @@ const Home = () => {
           {/* Left Side: Image */}
           <div className="relative w-full lg:w-5/12 min-h-[300px] lg:min-h-full">
             <Image
-              src="/products/FT7-1-1.webp"
+              src="/product2-1.webp"
               alt="Matrix Facial Tissue"
               fill
               className="object-cover"
@@ -532,14 +489,14 @@ const Home = () => {
           <div className="w-full lg:w-7/12 p-4 md:p-12">
             <div className="text-left mb-3 md:mb-8">
               <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-4 tracking-wide">
-                Get the Best Facial Tissue in Delhi Today
+                Get the Best Paper Napkin in Delhi Today
               </h2>
               <p className="text-xl md:text-2xl font-bold text-red-700 mb-4">
-                Looking for a trusted facial tissue in Delhi?
+                Looking for a trusted paper napkin in Delhi?
               </p>
               <p className="text-gray-600 text-lg leading-relaxed">
-                Matrix Tissue offers premium quality, soft, and hygienic facial
-                tissue products at competitive prices. Fill out the form below
+                Matrix Tissue offers premium quality, soft, and hygienic paper
+                napkin products at competitive prices. Fill out the form below
                 and get a quick quote.
               </p>
             </div>
@@ -600,7 +557,11 @@ const Home = () => {
                 <button className="w-full bg-red-700 hover:bg-red-800 text-white font-bold py-4 rounded-xl text-xl transition-all shadow-lg active:scale-[0.98]">
                   Get Free Quote
                 </button>
-                <a href="https://wa.link/rt47ko" target="_blank" className="text-green-600 font-bold text-base hover:text-green-700 transition-colors">
+                <a
+                  href="https://wa.link/rt47ko"
+                  target="_blank"
+                  className="text-green-600 font-bold text-base hover:text-green-700 transition-colors"
+                >
                   “Get Instant Quote on WhatsApp”
                 </a>
               </div>
@@ -612,4 +573,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default PaperNapkin;

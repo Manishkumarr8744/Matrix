@@ -1,15 +1,10 @@
-import { Bebas_Neue, Geist, Geist_Mono, Teko } from "next/font/google";
+import { Bebas_Neue, Open_Sans, Teko } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/layout/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const openSans = Open_Sans({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-open-sans",
 });
 
 const bebas = Bebas_Neue({
@@ -33,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${bebas.variable} ${teko.variable} h-full antialiased`}
+      className={`${bebas.variable} ${teko.variable} ${openSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
