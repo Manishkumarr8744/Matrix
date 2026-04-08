@@ -1,10 +1,25 @@
 "use client";
 
-import { allProduct, products, whyChooseUs, whyBuyersChoose } from "@/data";
-import { BookCheck, IndianRupee, Package } from "lucide-react";
+import { useState } from "react";
+import {
+  allProduct,
+  products,
+  whyChooseUs,
+  whyBuyersChoose,
+  faqs,
+} from "@/data";
+import {
+  BookCheck,
+  ChevronDown,
+  IndianRupee,
+  Package,
+  Quote,
+} from "lucide-react";
 import Image from "next/image";
 
 const Home = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
   return (
     <div>
       {/* hero  */}
@@ -166,7 +181,7 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 w-full max-w-7xl">
           {whyChooseUs.map((feature, index) => (
             <div
               key={index}
@@ -220,7 +235,7 @@ const Home = () => {
           Why Buyers Choose Matrix Tissue
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-7xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8 w-full max-w-7xl">
           {whyBuyersChoose.map((item, index) => (
             <div
               key={index}
@@ -261,7 +276,7 @@ const Home = () => {
             "/ecom2/logo5.webp",
             "/ecom2/logo8.webp",
             "/ecom2/logo.webp",
-            "/ecom2/cropped-matrix-logo-Photoroom-2.png"
+            "/ecom2/cropped-matrix-logo-Photoroom-2.png",
           ].map((feature, index) => (
             <Image
               src={feature}
@@ -269,9 +284,297 @@ const Home = () => {
               width={1000}
               height={1000}
               key={index}
-              className="h-auto w-28 "
+              className="h-28 w-28 "
             />
           ))}
+        </div>
+      </section>
+
+      {/* premium facial tissue collection  */}
+      <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center">
+        <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-6 text-center tracking-wide">
+          Premium Facial Tissue Collection
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 w-full max-w-7xl">
+          {[
+            {
+              title: "Facial Tissue in Delhi",
+              desc: "Premium Box Facial Tissue – Soft & Absorbent Collection",
+            },
+            {
+              title: "Facial Tissue Supplier in Delhi",
+              desc: "Pocket Facial Tissue – Travel-Friendly Hygiene Pack",
+            },
+            {
+              title: "Facial Tissue Manufacturer in Delhi",
+              desc: "Ultra Soft Facial Tissue – Gentle Care Collection",
+            },
+            {
+              title: "Facial Tissue",
+              desc: "Multi-Ply Facial Tissue – Strong & Durable Range",
+            },
+            {
+              title: "Facial Tissue in Delhi",
+              desc: "Eco-Friendly Facial Tissue – Sustainable Collection",
+            },
+            {
+              title: "Facial Tissue Manufacturer",
+              desc: "Customized Facial Tissue Packs – Private Label Solutions",
+            },
+            {
+              title: "Facial Tissue Supplier in Delhi",
+              desc: "Premium Facial Tissue for Hotels & Offices",
+            },
+            {
+              title: "Facial Tissue in Delhi",
+              desc: "High Absorbency Facial Tissue – Commercial Use Pack",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-md transition-all group cursor-pointer"
+            >
+              <div>
+                <h3 className="font-bold text-gray-900 text-lg mb-2 group-hover:text-red-700 transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4 md:text-lg">
+                  {item.desc}
+                </p>
+              </div>
+              <span className="text-red-600 font-semibold text-sm inline-flex items-center gap-1">
+                View Collection →
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Bulk Supply CTA */}
+        <div className="mt-16 w-full max-w-5xl bg-gradient-to-r from-red-700 to-red-900 rounded-3xl p-8 md:p-12 text-center text-white shadow-xl">
+          <h3 className="text-3xl md:text-5xl font-bebas mb-4 tracking-wide">
+            Need Bulk Facial Tissue Supply?
+          </h3>
+          <p className="text-lg md:text-xl mb-8 text-red-50 max-w-3xl mx-auto">
+            Partner with a reliable facial tissue manufacturer in Delhi NCR for
+            consistent quality and timely delivery.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button className="w-full sm:w-auto bg-white text-red-700 font-bold py-4 px-10 rounded-xl text-lg hover:bg-gray-100 transition-colors shadow-lg">
+              Get Bulk Pricing
+            </button>
+            <button className="w-full sm:w-auto bg-transparent border-2 border-white text-white font-bold py-4 px-10 rounded-xl text-lg hover:bg-white/10 transition-colors">
+              Call Now
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* testimonial section  */}
+      <section className="px-5 py-12 md:py-20 lg:px-24 bg-white flex flex-col items-center">
+        <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-12 text-center tracking-wide">
+          What Our Clients Say
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-7xl">
+          {[
+            {
+              quote:
+                "Matrix Tissue is a highly reliable facial tissue supplier in Delhi. The quality is consistently soft and perfect for our daily office use.",
+              author: "Corporate Client",
+            },
+            {
+              quote:
+                "We’ve been sourcing bulk facial tissue for our hotel chain, and their service is always on time with excellent pricing.",
+              author: "Hotel Manager",
+            },
+            {
+              quote:
+                "One of the best facial tissue manufacturers in Delhi NCR. The products are hygienic and ideal for healthcare environments.",
+              author: "Hospital Administrator",
+            },
+            {
+              quote:
+                "Their customized facial tissue packaging helped us build our brand presence. Highly professional team.",
+              author: "Retail Distributor",
+            },
+            {
+              quote:
+                "Premium quality facial tissue with great absorbency. Truly a dependable supplier for bulk requirements.",
+              author: "Business Owner",
+            },
+            {
+              quote:
+                "Fast delivery and consistent quality make Matrix Tissue our go-to facial tissue supplier in Delhi.",
+              author: "Office Admin",
+            },
+            {
+              quote:
+                "Soft, skin-friendly facial tissue products that meet our salon’s hygiene standards perfectly.",
+              author: "Salon Owner",
+            },
+            {
+              quote:
+                "Affordable pricing with top-notch quality. One of the most trusted facial tissue suppliers we’ve worked with.",
+              author: "Wholesale Buyer",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="bg-gray-50 p-8 rounded-2xl border border-gray-100 flex flex-col justify-between hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative group"
+            >
+              <Quote className="absolute top-4 right-4 text-red-200 w-6 h-6 opacity-50 group-hover:opacity-100 transition-opacity" />
+              <p className="text-gray-700 italic mb-6 leading-relaxed relative z-10 text-sm md:text-base md:text-lg">
+                "{item.quote}"
+              </p>
+              <div className="border-t border-red-100 pt-4">
+                <p className="font-bold text-red-700 text-xs md:text-sm tracking-wide uppercase">
+                  — {item.author}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Faq section  */}
+      <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center">
+        <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-12 text-center tracking-wide">
+          Frequently Asked Questions – Face Tissue
+        </h2>
+
+        <div className="w-full max-w-4xl space-y-4">
+          {faqs.map((faq, index) => {
+            const isOpen = activeIndex === index;
+            return (
+              <div
+                key={index}
+                className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm transition-all duration-300"
+              >
+                <button
+                  onClick={() => setActiveIndex(isOpen ? null : index)}
+                  className="w-full flex items-center justify-between p-5 md:p-7 text-left hover:bg-red-50/30 transition-colors"
+                >
+                  <span className="font-bold text-gray-900 text-lg md:text-xl pr-4">
+                    {faq.question}
+                  </span>
+                  <ChevronDown
+                    className={`w-6 h-6 text-red-600 shrink-0 transition-transform duration-300 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                <div
+                  className={`transition-all duration-300 ease-in-out ${
+                    isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <div className="p-5 md:p-7 pt-0 text-gray-600 leading-relaxed text-base md:text-lg border-t border-gray-100">
+                    {faq.answer}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Inquiry Form Section */}
+      <section className="px-5 py-12 md:py-20 lg:px-10 bg-white flex flex-col items-center">
+        <div className="w-full max-w-7xl bg-gray-50 rounded-[2.5rem] border border-gray-200 shadow-sm transition-all hover:shadow-md overflow-hidden flex flex-col lg:flex-row">
+          {/* Left Side: Image */}
+          <div className="relative w-full lg:w-5/12 min-h-[300px] lg:min-h-full">
+            <Image
+              src="/products/FT7-1-1.webp"
+              alt="Matrix Facial Tissue"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent lg:hidden flex items-end p-5">
+              <h2 className="text-3xl font-bebas text-white tracking-wide">
+                Get a Free Quote
+              </h2>
+            </div>
+          </div>
+
+          {/* Right Side: Form Content */}
+          <div className="w-full lg:w-7/12 p-4 md:p-12">
+            <div className="text-left mb-3 md:mb-8">
+              <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-4 tracking-wide">
+                Get the Best Facial Tissue in Delhi Today
+              </h2>
+              <p className="text-xl md:text-2xl font-bold text-red-700 mb-4">
+                Looking for a trusted facial tissue in Delhi?
+              </p>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                Matrix Tissue offers premium quality, soft, and hygienic facial
+                tissue products at competitive prices. Fill out the form below
+                and get a quick quote.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 text-left">
+              <div className="flex flex-col gap-1">
+                <label className="font-bold text-gray-700 ml-1 text-lg">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter your full name"
+                  className="w-full p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all bg-white"
+                />
+              </div>
+              <div className="flex flex-col gap-1">
+                <label className="font-bold text-gray-700 ml-1 text-lg">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  placeholder="Enter your contact number"
+                  className="w-full p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all bg-white"
+                />
+              </div>
+              <div className="flex flex-col gap-1">
+                <label className="font-bold text-gray-700 ml-1 text-lg">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="w-full p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all bg-white"
+                />
+              </div>
+              <div className="flex flex-col gap-1">
+                <label className="font-bold text-gray-700 ml-1 text-lg">
+                  Requirement
+                </label>
+                <input
+                  type="text"
+                  placeholder="Box / Pocket / Bulk"
+                  className="w-full p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all bg-white"
+                />
+              </div>
+              <div className="flex flex-col gap-1 md:col-span-2">
+                <label className="font-bold text-gray-700 ml-1 text-lg">
+                  Message
+                </label>
+                <textarea
+                  rows="3"
+                  placeholder="Share your specific needs"
+                  className="w-full p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all resize-none bg-white"
+                ></textarea>
+              </div>
+
+              <div className="md:col-span-2 flex flex-col items-center gap-4 mt-4">
+                <button className="w-full bg-red-700 hover:bg-red-800 text-white font-bold py-4 rounded-xl text-xl transition-all shadow-lg active:scale-[0.98]">
+                  Get Free Quote
+                </button>
+                <button className="text-green-600 font-bold text-base hover:text-green-700 transition-colors">
+                  “Get Instant Quote on WhatsApp”
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

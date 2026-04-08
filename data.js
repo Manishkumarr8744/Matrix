@@ -5,6 +5,7 @@ import {
   Boxes,
   Building2,
   ClipboardCheck,
+  Focus,
   Layers,
   LayoutGrid,
   MousePointer2,
@@ -142,4 +143,44 @@ export const whyChooseUs = [
     title: "Customized Solutions",
     desc: "We provide private labeling and customized packaging options, making us a preferred facial tissue supplier in Delhi for businesses and brands.",
   },
+  {
+    icon: <Focus className="w-12 h-12 text-red-600" />,
+    title: "Flexible & Customer-Focused Solutions",
+    desc: "We provide easy ordering, private labeling, and fully customized packaging options tailored to your specific requirements.",
+  },
 ];
+
+
+export const faqs = [
+    {
+      question:
+        "1. What makes Matrix Tissue a reliable facial tissue manufacturer in Delhi?",
+      answer:
+        "Matrix Tissue is known for delivering high-quality facial tissue in Delhi with superior softness, strength, and hygienic manufacturing standards, making it a trusted choice for various industries.",
+    },
+    {
+      question: "2. Do you provide bulk facial tissue supply in Delhi?",
+      answer:
+        "Yes, we are a leading facial tissue supplier in Delhi, offering bulk and wholesale supply for hotels, offices, hospitals, and distributors.",
+    },
+    {
+      question: "3. Are your facial tissue products safe for sensitive skin?",
+      answer:
+        "Our soft facial tissue products are made using premium materials, ensuring they are gentle, skin-friendly, and suitable for daily use.",
+    },
+    {
+      question: "4. What types of facial tissue products do you offer?",
+      answer:
+        "We offer a wide range of facial tissue products, including box facial tissues, pocket tissues, multi-ply tissues, and customized packaging options.",
+    },
+    {
+      question: "5. Can I get customized facial tissue packaging for my brand?",
+      answer:
+        "Yes, we provide private labeling and customized packaging solutions, making us a preferred facial tissue manufacturer in Delhi for businesses.",
+    },
+    {
+      question: "6. How can I place an order for facial tissue in Delhi?",
+      answer:
+        "You can easily contact us through our website or enquiry form to get the best quote and quick delivery for your facial tissue requirements in Delhi.",
+    },
+  ];
