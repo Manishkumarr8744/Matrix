@@ -165,7 +165,7 @@ export const products = [
   {
     image: "/products/PRODUCT20-1-600x600.webp",
     title: "Bulk Facial Tissue Supply",
-    desc: "High-quality facial tissues available in bulk for hotels, hospitals, offices, and distributors in Delhi NCR.",
+    desc: "High-quality facial tissues available in bulk for hotels, offices, and distributors in Delhi NCR.",
   },
 ];
 

@@ -44,6 +44,41 @@ const exploreLinks = [
   { label: "Shipping Policy", href: "/shipping-policy/" },
   { label: "Return & Refund Policy", href: "/return-refund-policy/" },
 ];
+
+const featuredproducts = [
+  {
+    name: "Premium Box Facial Tissue – Soft & Absorbent Collection",
+    img: "/facial-imgP/img1.webp",
+  },
+  {
+    name: "Pocket Facial Tissue – Travel-Friendly Hygiene Pack",
+    img: "/facial-imgP/img2.webp",
+  },
+  {
+    name: "Ultra Soft Facial Tissue – Gentle Care Collection",
+    img: "/facial-imgP/img3.webp",
+  },
+  {
+    name: "Multi-Ply Facial Tissue – Strong & Durable Range",
+   img: "/facial-imgP/img4.webp",
+  },
+  {
+    name: "Eco-Friendly Facial Tissue – Sustainable Collection",
+    img: "/facial-imgP/img5.webp",
+  },
+  {
+    name: "Customized Facial Tissue Packs – Private Label Solutions",
+    img: "/facial-imgP/img6.webp",
+  },
+  {
+    name: "Premium Facial Tissue for Hotels & Offices",
+    img: "/facial-imgP/img7.webp",
+  },
+  {
+    name: "High Absorbency Facial Tissue – Commercial Use Pack ",
+    img: "/facial-imgP/img8.webp",
+  },
+];
  
 const productLinks = [
   { label: "Face Tissue", href: "/product-category/face-tissue/" },
@@ -195,8 +230,7 @@ const Home = () => {
         </h2>
         <div className="max-w-5xl text-center space-y-4">
           <p className="text-lg md:text-xl text-gray-700 leading-7">
-            Matrix Tissue began its journey in 2008 under the visionary
-            leadership of{" "}
+            Matrix Tissue began its journey in 2008 under the visionary leadership of {"  "}
             <span className="font-semibold">Mr. Praveen Bhagwat</span>, with a
             mission to redefine quality in the tissue industry. Today, we are
             recognized as a trusted{" "}
@@ -207,7 +241,7 @@ const Home = () => {
             superior softness, strength, and hygiene.
           </p>
           <p className="text-lg md:text-xl text-gray-700 leading-7">
-            Our range of facial tissue in Delhi caters to households, offices,
+            Our range of <span className="font-semibold"> facial tissue in Delhi </span> caters to households, offices,
             hotels, and healthcare sectors, ensuring comfort and reliability in
             every use. With years of expertise, Matrix Tissue has established
             itself as a dependable{" "}
@@ -221,7 +255,7 @@ const Home = () => {
             Our commitment to innovation and consistent quality allows us to
             provide soft facial tissue, premium facial tissue, and customized
             solutions that meet modern hygiene standards. We continue to focus
-            on delivering the best facial tissue products in Delhi, making us a
+            on delivering the <span className="font-semibold"> best facial tissue products in Delhi </span>, making us a
             preferred choice for customers seeking quality and value.
           </p>
         </div>
@@ -397,64 +431,42 @@ const Home = () => {
 
       {/* premium facial tissue collection  */}
       <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-6">
-        <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-6 text-center tracking-wide">
-          Premium Facial Tissue Collection
-        </h2>
+        
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 w-full max-w-7xl">
-          {[
-            {
-              title: "Facial Tissue in Delhi",
-              desc: "Premium Box Facial Tissue – Soft & Absorbent Collection",
-            },
-            {
-              title: "Facial Tissue Supplier in Delhi",
-              desc: "Pocket Facial Tissue – Travel-Friendly Hygiene Pack",
-            },
-            {
-              title: "Facial Tissue Manufacturer in Delhi",
-              desc: "Ultra Soft Facial Tissue – Gentle Care Collection",
-            },
-            {
-              title: "Facial Tissue",
-              desc: "Multi-Ply Facial Tissue – Strong & Durable Range",
-            },
-            {
-              title: "Facial Tissue in Delhi",
-              desc: "Eco-Friendly Facial Tissue – Sustainable Collection",
-            },
-            {
-              title: "Facial Tissue Manufacturer",
-              desc: "Customized Facial Tissue Packs – Private Label Solutions",
-            },
-            {
-              title: "Facial Tissue Supplier in Delhi",
-              desc: "Premium Facial Tissue for Hotels & Offices",
-            },
-            {
-              title: "Facial Tissue in Delhi",
-              desc: "High Absorbency Facial Tissue – Commercial Use Pack",
-            },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-md transition-all group cursor-pointer"
-            >
-              <div>
-                <h3 className="font-bold text-gray-900 text-lg mb-1 group-hover:text-red-700 transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-6 mb-4 md:text-lg">
-                  {item.desc}
-                </p>
-              </div>
-              <span className="text-red-600 font-semibold text-sm inline-flex items-center gap-0.5">
-                View Collection →
-              </span>
+        <div className="bg-[##f9fafb] py-8 px-4 md:px-10">
+      
+      {/* 🔥 TITLE */}
+      <h2 className="text-3xl md:text-6xl font-light text-center text-purple-700 mb-10">
+        Premium Selections
+      </h2>
+
+      {/* 🔥 GRID */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        
+        {featuredproducts.map((item, index) => (
+          <div key={index} className="flex items-center gap-4">
+            
+            {/* IMAGE */}
+            <div className="w-[70px] h-[70px] rounded-xl overflow-hidden shadow-md">
+              <Image
+                src={item.img}
+                alt={item.name}
+                width={70}
+                height={70}
+                className="w-full h-full object-contain"
+              />
             </div>
-          ))}
-        </div>
 
+            {/* TEXT */}
+            <p className="text-sm md:text-base text-gray-800 leading-tight">
+              {item.name}
+            </p>
+
+          </div>
+        ))}
+
+      </div>
+    </div>
         {/* Bulk Supply CTA */}
         <div className="mt-8 w-full max-w-5xl bg-gradient-to-r from-red-700 to-red-900 rounded-3xl p-6 md:p-8 text-center text-white shadow-xl">
           <h3 className="text-3xl md:text-5xl font-bebas mb-3 tracking-wide">
@@ -477,6 +489,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      
 
       {/* testimonial section  */}
       <section className="px-5 py-12 md:py-20 lg:px-24 bg-white flex flex-col items-center lg:py-6">
