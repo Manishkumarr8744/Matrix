@@ -149,7 +149,7 @@ const Home = () => {
               <h3 className="text-xl my-1 md:text-2xl text-center">
                 {item?.title}
               </h3>
-              <p className="px-2 md:text-xl font-open">{item?.desc}</p>
+              <p className="px-2 md:text-xl font-open text-center">{item?.desc}</p>
 
               <button className="my-4 text-xl bg-red-700 text-white px-10 py-2 rounded-lg hover:bg-red-800">
                 Get Quote
@@ -859,7 +859,7 @@ const Home = () => {
       {/* ── CITY TAGS ── */}
       <div className="flex flex-wrap items-center gap-2 px-8 py-4 border-b border-[#222]">
         <span className="text-xl  font-semibold text-gray-600 uppercase tracking-widest mr-1">
-          Supply network
+          
         </span>
         {cities.map((city) => (
           <span

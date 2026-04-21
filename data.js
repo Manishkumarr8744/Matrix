@@ -155,7 +155,7 @@ export const products = [
   {
     image: "/products/FT6-3-600x600.webp",
     title: "Multi-Ply Facial Tissue",
-    desc: "Strong and highly absorbent multi-ply facial tissues for enhanced durability and performance.",
+    desc: "Strong and highly absorbent multi-ply facial tissues for enhanced durability, performance, and ease in every use.",
   },
   {
     image: "/products/FT7-1-1.webp",
