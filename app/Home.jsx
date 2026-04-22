@@ -188,7 +188,7 @@ const Home = () => {
               <h3 className="text-xl my-1 md:text-2xl text-center">
                 {item?.title}
               </h3>
-              <p className="px-2 md:text-xl font-open text-center">{item?.desc}</p>
+              <p className="px-2 md:text-xl font-open text-center h-full">{item?.desc}</p>
 
               <button onClick={()=>setOpen(!open)} className="my-4 text-xl bg-red-700 text-white px-10 py-2 rounded-lg hover:bg-red-800">
                 Get Quote
@@ -203,7 +203,7 @@ const Home = () => {
       </section>
 
       {/* cta  */}
-      <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-5">
+      <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-2">
         {/* Bulk Supply CTA */}
         <div className="mt-8 w-full max-w-5xl bg-gradient-to-r from-red-700 to-red-900 rounded-3xl p-6 md:p-8 text-center text-white shadow-xl">
           <h3 className="text-3xl md:text-5xl font-bebas mb-3 tracking-wide">
