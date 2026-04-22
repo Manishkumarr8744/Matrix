@@ -64,7 +64,7 @@ const Navbar = () => {
         />  
       </a> */}
 
-      <button onClick={()=>{setOpen(!open)}} className="text-2xl bg-red-700 hover:bg-red-800 sm:hidden md:flex lg:flex text-white px-5 py-1 rounded-lg font-teko md:text-lg lg:rounded xl:text-2xl xl:py-2 xl:px-5 lg:font-bold   lg:px-2 lg:py-2">
+      <button onClick={()=>{setOpen(!open)}} className="text-xl  bg-red-700 hover:bg-red-800 sm:hidden md:flex lg:flex text-white px-3 py-1 rounded-lg font-teko md:text-2xl lg:rounded xl:text-2xl xl:py-2 xl:px-5 lg:font-bold   lg:px-2 lg:py-2">
         Get a Quote
       </button>
 
@@ -73,7 +73,7 @@ const Navbar = () => {
   <a
     href="https://wa.link/rt47ko"
     target="_blank"
-    className="w-14 h-14 flex items-center justify-center rounded-full bg-green-500 text-white shadow-md hover:scale-110 transition "
+    className="w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-green-500 text-white shadow-md hover:scale-110 transition "
   >
     <FaWhatsapp className="w-9 h-9" />
   </a>
