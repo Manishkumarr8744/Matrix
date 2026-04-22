@@ -21,23 +21,23 @@ export const nav = [
   },
   {
     label: "About Us",
-    link: "/",
+    link: "https://matrixtissues.com/about-us/",
   },
   {
     label: "Our Products",
-    link: "/",
+    link: "https://matrixtissues.com/our-products/",
   },
   {
     label: "Blog",
-    link: "/",
+    link: "https://matrixtissues.com/blog/",
   },
   {
     label: "Career",
-    link: "/",
+    link: "https://matrixtissues.com/career/",
   },
   {
     label: "Contact Us",
-    link: "/",
+    link: "https://matrixtissues.com/contact-us/",
   },
 ];
 

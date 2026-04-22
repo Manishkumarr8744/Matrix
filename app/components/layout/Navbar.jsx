@@ -14,10 +14,20 @@ import {
 } from "@/components/ui/sheet";
 import Link from "next/link";
 import { nav } from "@/data";
+import { FaWhatsapp } from "react-icons/fa";
+import { MdCall } from "react-icons/md";
+import { useState } from "react";
+import Form from "../Form";
 
 const Navbar = () => {
+
+  const [open,setOpen]=useState(false)
+  
   return (
-    <nav className="h-[14vh] bg-pink-100/50 flex items-center justify-between px-4 overflow-hidden border-b md:px-20 lg:px-5 ">
+    <>
+    {open && <Form setOpen={setOpen}/>}
+
+    <nav className="h-[14vh] bg-pink-100/50 flex items-center justify-between px-4 overflow-hidden border-b md:px-20 lg:px-5  ">
       <Image
         height={1000}
         width={1000}
@@ -38,12 +48,12 @@ const Navbar = () => {
       </div>
 
       <Link
-        href={"/"}
+        href={"https://tissuekart.com/"}
         className="text-red-500 text-2xl bg-white px-4 py-2 xl:py-2 lg:px-2 lg:py-1 border border-red-500 uppercase animate-pulse rounded hidden lg:flex"
       >
         Shop Online
       </Link>
-
+{/* 
       <a href="https://wa.link/rt47ko" target="_blank">
         <Image
           height={1000}
@@ -51,22 +61,45 @@ const Navbar = () => {
           alt="whatsapp"
           src={"/nav/whatspp.png"}
           className="h-[7vh] w-auto lg:hidden "
-        />
-      </a>
+        />  
+      </a> */}
 
-      <button className="bg-red-700 hover:bg-red-800 hidden lg:flex text-white px-5 py-1 rounded-lg font-teko md:text-lg lg:rounded xl:text-2xl xl:py-2 xl:px-5 lg:font-bold   lg:px-2 lg:py-2">
+      <button onClick={()=>{setOpen(!open)}} className="text-2xl bg-red-700 hover:bg-red-800 sm:hidden md:flex lg:flex text-white px-5 py-1 rounded-lg font-teko md:text-lg lg:rounded xl:text-2xl xl:py-2 xl:px-5 lg:font-bold   lg:px-2 lg:py-2">
         Get a Quote
       </button>
-      
-      <a href="https://wa.link/rt47ko" target="_blank">
-        <Image
-          height={1000}
-          width={1000}
-          alt="whatsapp"
-          src={"/nav/whatspp.png"}
-          className="h-[7vh] w-auto hidden lg:flex lg:h-[6h] lg:w-auto "
-        />
-      </a>
+
+       <div className="  flex  gap-3 z-50">
+  
+  <a
+    href="https://wa.link/rt47ko"
+    target="_blank"
+    className="w-14 h-14 flex items-center justify-center rounded-full bg-green-500 text-white shadow-md hover:scale-110 transition "
+  >
+    <FaWhatsapp className="w-9 h-9" />
+  </a>
+
+  
+
+</div>
+
+     <div className="fixed right-4 bottom-2 flex flex-col gap-3 z-50">
+  
+  <a
+    href="https://wa.link/rt47ko"
+    target="_blank"
+    className="w-14 h-14 flex items-center justify-center rounded-full bg-green-500 text-white shadow-md hover:scale-110 transition animate-bounce"
+  >
+    <FaWhatsapp className="w-9 h-9" />
+  </a>
+
+  <a
+    href="tel:8810540823"
+    className="w-14 h-14 flex items-center justify-center rounded-full bg-red-500 text-white shadow-md hover:scale-110 transition animate-bounce"
+  >
+    <MdCall className="w-7 h-7" />
+  </a>
+
+</div>
 
       <Sheet>
         <SheetTrigger asChild>
@@ -80,6 +113,7 @@ const Navbar = () => {
         </SheetContent>
       </Sheet>
     </nav>
+    </>
   );
 };
 
