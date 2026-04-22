@@ -139,15 +139,15 @@ const CustomizeTissue = () => {
           <div className="grid grid-cols-3 mt-5 gap-2 text-white md:gap-8 md:mt-6">
             <div className="flex flex-col items-center gap-1 ">
               <MousePointerClick className="md:h-9 md:w-9" />
-              <p className="md:text-xl">CUSTOM BRAND PRINTING AVAILABLE</p>
+              <p className="md:text-xl text-center">CUSTOM BRAND PRINTING AVAILABLE</p>
             </div>
             <div className="flex flex-col items-center gap-1 text-center">
               <Wind className="md:h-9 md:w-9" />
-              <p className="md:text-xl">PREMIUM SOFT QUALITY MATERIAL</p>
+              <p className="md:text-xl text-center">PREMIUM SOFT QUALITY MATERIAL</p>
             </div>
             <div className="flex flex-col items-center gap-1 ">
               <Package className="md:h-9 md:w-9" />
-              <p className="md:text-xl">BULK & WHOLESALE SUPPLY</p>
+              <p className="md:text-xl text-center">BULK & WHOLESALE SUPPLY</p>
             </div>
           </div>
 
@@ -289,7 +289,7 @@ const CustomizeTissue = () => {
           </div>
         </section>
 
-            //section added  by docs
+           
         <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-6">
           <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-4 text-center tracking-wide">
             Customized Tissue Gifting Collection
@@ -666,110 +666,7 @@ const CustomizeTissue = () => {
           </div>
         </section>
 
-        {/* Inquiry Form Section */}
-        <section className="px-5 py-12 md:py-20 lg:px-10 bg-white flex flex-col items-center lg:py-8">
-          <div className="w-full max-w-7xl bg-gray-50 rounded-[2.5rem] border border-gray-200 shadow-sm transition-all hover:shadow-md overflow-hidden flex flex-col lg:flex-row">
-            {/* Left Side: Image */}
-            <div className="relative w-full lg:w-5/12 min-h-[300px] lg:min-h-full">
-              <Image
-                src="/matrix-products17-768x768 (1).webp"
-                alt="Matrix Facial Tissue"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent lg:hidden flex items-end p-5">
-                <h2 className="text-3xl font-bebas text-white tracking-wide">
-                  Get a Free Quote
-                </h2>
-              </div>
-            </div>
-
-            {/* Right Side: Form Content */}
-            <div className="w-full lg:w-7/12 p-4 md:p-8">
-              <div className="text-left mb-3 md:mb-6">
-                <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-2 tracking-wide">
-                  Get the Best Customized Facial Tissue & Paper Napkins Today
-                </h2>
-                <p className="text-xl md:text-2xl font-bold text-red-700 mb-2">
-                  Looking for a reliable customized tissue solution for your
-                  business?
-                </p>
-                <p className="text-gray-600 text-lg leading-6">
-                  Matrix Tissue offers premium quality customized facial tissues
-                  and paper napkins with logo printing, branding options, and
-                  hygienic manufacturing at competitive prices for bulk and
-                  wholesale needs.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-left">
-                <div className="flex flex-col gap-0.5">
-                  <label className="font-bold text-gray-700 ml-1 text-lg">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Enter your full name"
-                    className="w-full p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all bg-white"
-                  />
-                </div>
-                <div className="flex flex-col gap-1">
-                  <label className="font-bold text-gray-700 ml-1 text-lg">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    placeholder="Enter your contact number"
-                    className="w-full p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all bg-white"
-                  />
-                </div>
-                <div className="flex flex-col gap-1">
-                  <label className="font-bold text-gray-700 ml-1 text-lg">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="w-full p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all bg-white"
-                  />
-                </div>
-                <div className="flex flex-col gap-0.5">
-                  <label className="font-bold text-gray-700 ml-1 text-lg">
-                    Requirement
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Box / Pocket / Bulk"
-                    className="w-full p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all bg-white"
-                  />
-                </div>
-                <div className="flex flex-col gap-0.5 md:col-span-2">
-                  <label className="font-bold text-gray-700 ml-1 text-lg">
-                    Message
-                  </label>
-                  <textarea
-                    rows="3"
-                    placeholder="Share your specific needs"
-                    className="w-full p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all resize-none bg-white"
-                  ></textarea>
-                </div>
-
-                <div className="md:col-span-2 flex flex-col items-center gap-3 mt-4">
-                  <button className="w-full bg-red-700 hover:bg-red-800 text-white font-bold py-4 rounded-xl text-xl transition-all shadow-lg active:scale-[0.98]">
-                    Get Free Quote
-                  </button>
-                  <a
-                    href="https://wa.link/rt47ko"
-                    target="_blank"
-                    className="text-green-600 font-bold text-base hover:text-green-700 transition-colors"
-                  >
-                    “Get Instant Quote on WhatsApp”
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
       </div>
     </>
   );
