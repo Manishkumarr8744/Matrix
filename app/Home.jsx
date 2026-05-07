@@ -32,6 +32,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Form from "./components/Form";
 import EnquiryForm from "./components/EnquiryForm";
+import { usePathname } from "next/navigation";
 
 
 // const exploreLinks = [
@@ -123,6 +124,9 @@ const Home = () => {
   const [activeIndex, setActiveIndex] = useState(null);
    const [open,setOpen]=useState(false)
 
+     const path = usePathname();
+     const totalwords = path.split("/")[1].split("-");
+
   return (
     <>      {open && <Form setOpen={setOpen}/>}
     <div>
@@ -169,11 +173,11 @@ const Home = () => {
       
 
       {/* product section  */}
-      <section className="px-3 py-8 md:py-14 lg:px-20 flex flex-col items-center lg:py-6">
-        <p className="text-3xl md:text-5xl font-bebas text-gray-900 mb-2 text-center tracking-wide">
+      <section className="px-3 py-5 md:py-14 lg:px-20 flex flex-col items-center lg:py-6">
+        <p className="text-3xl md:text-5xl font-bebas text-gray-900 md:mb-2 text-center tracking-wide">
           Send Your Enquiry Directly to Matrix Tissue
         </p>
-        <div className="grid grid-cols-2 gap-1 mt-5 md:grid-cols-4 lg:gap-6">
+        <div className="grid grid-cols-2 gap-1 mt-2 md:mt-5 md:grid-cols-4 lg:gap-6">
           {products.map((item, idx) => (
             <div
               key={idx}
@@ -198,24 +202,24 @@ const Home = () => {
           ))}
         </div>
 
-        <a href="https://matrixtissues.com/our-products" className="mt-7 bg-red-700 text-white px-8 py-2 rounded text-xl md:scale-110 lg:px-20 lg:text-2xl">
+        <a href="https://matrixtissues.com/product-category/face-tissue/" className="mt-3 md:mt-7 bg-red-700 text-white px-8 py-2 rounded text-xl md:scale-110 lg:px-20 lg:text-2xl">
           SHOW MORE
         </a>
       </section>
 
       {/* cta  */}
-      <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-2">
+      <section className="px-5  md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-2">
         {/* Bulk Supply CTA */}
         <div className="mt-8 w-full max-w-5xl bg-gradient-to-r from-red-700 to-red-900 rounded-3xl p-6 md:p-8 text-center text-white shadow-xl">
-          <h3 className="text-3xl md:text-5xl font-bebas mb-3 tracking-wide">
+          <h3 className="text-3xl md:text-5xl font-bebas md:mb-3 tracking-wide">
             Need Bulk Facial Tissue Supply?
           </h3>
-          <p className="text-lg md:text-xl mb-7 text-red-50 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl mb-3 md:mb-7 leading-5  text-red-50 max-w-3xl mx-auto">
             Partner with a reliable facial tissue manufacturer in Delhi NCR for
             consistent quality and timely delivery.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button onClick={()=>setOpen(!open)} className="w-full sm:w-auto bg-white text-red-700 font-bold py-3 px-7 rounded-xl text-lg hover:bg-gray-100 transition-colors shadow-lg">
+            <button onClick={()=>setOpen(true)} className="w-full sm:w-auto bg-white text-red-700 font-bold py-3 px-7 rounded-xl text-lg hover:bg-gray-100 transition-colors shadow-lg">
               Get Bulk Pricing
             </button>
             <a
@@ -229,46 +233,46 @@ const Home = () => {
       </section>
 
       {/* third section  */}
-      <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-6">
-        <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-6 text-center tracking-wide">
+      <section className="px-5 py-8 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-6">
+        <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-1 md:mb-6 text-center tracking-wide">
           Leading Facial Tissue in Delhi
         </h2>
         <div className="max-w-5xl text-center space-y-4">
-          <p className="text-lg md:text-xl text-gray-700 leading-7">
+          <p className="text-lg md:text-xl  text-gray-700 leading-5 md:leading-7">
             Matrix Tissue began its journey in 2008 under the visionary leadership of {"  "}
-            <span className="font-semibold">Mr. Praveen Bhagwat</span>, with a
+             Mr. Praveen Bhagwat , with a
             mission to redefine quality in the tissue industry. Today, we are
             recognized as a trusted{" "}
-            <span className="font-semibold">
+          
               facial tissue manufacturer in Delhi
-            </span>
+            
             , offering premium-quality facial tissue products designed for
             superior softness, strength, and hygiene.
           </p>
-          <p className="text-lg md:text-xl text-gray-700 leading-7">
-            Our range of <span className="font-semibold"> facial tissue in Delhi </span> caters to households, offices,
+          <p className="text-lg md:text-xl text-gray-700 leading-5 md:leading-7">
+            Our range of  facial tissue in Delhi caters to households, offices,
             hotels, and healthcare sectors, ensuring comfort and reliability in
             every use. With years of expertise, Matrix Tissue has established
             itself as a dependable{" "}
-            <span className="font-semibold">
+            
               facial tissue supplier in Delhi NCR
-            </span>
+            
             , delivering high-quality solutions for both retail and bulk
             requirements.
           </p>
-          <p className="text-lg md:text-xl text-gray-700 leading-7">
+          <p className="text-lg md:text-xl text-gray-700 leading-5 md:leading-7">
             Our commitment to innovation and consistent quality allows us to
             provide soft facial tissue, premium facial tissue, and customized
             solutions that meet modern hygiene standards. We continue to focus
-            on delivering the <span className="font-semibold"> best facial tissue products in Delhi </span>, making us a
+            on delivering the  best facial tissue products in Delhi , making us a
             preferred choice for customers seeking quality and value.
           </p>
         </div>
       </section>
 
       {/* fouth section  */}
-      <section className="px-3 py-10 md:py-14 lg:px-20 flex flex-col items-center lg:py-6">
-        <p className="text-3xl md:text-5xl font-bebas text-gray-900 mb-3 text-center tracking-wide">
+      <section className="px-3 py-6 md:py-14 lg:px-20 flex flex-col items-center lg:py-6">
+        <p className="text-3xl md:text-5xl font-bebas text-gray-900 md:mb-3 text-center tracking-wide">
           Complete Range of Facial Tissue Products
         </p>
         <div className="grid grid-cols-2 gap-2 mt-5 md:grid-cols-4 lg:gap-4">
@@ -284,7 +288,7 @@ const Home = () => {
                 alt={item?.title}
                 className="h-auto w-full"
               />
-              <h3 className="text-xl my-1 md:text-2xl text-center">
+              <h3 className="text-xl my-1 md:text-2xl text-center h-full">
                 {item?.title}
               </h3>
 
@@ -297,15 +301,15 @@ const Home = () => {
       </section>
 
       {/* Why Choose Section */}
-      <section className="px-5 py-12 md:py-20 lg:px-24 bg-white flex flex-col items-center lg:py-3">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-1 tracking-wide">
+      <section className="px-5 py-2 md:py-20 lg:px-24 bg-white flex flex-col items-center lg:py-3">
+        <div className="text-center mb-4 md:mb-8">
+          <h2 className="text-4xl md:text-5xl font-bebas text-gray-900 md:mb-1 tracking-wide">
             Why Choose Matrix Tissue
           </h2>
           <p className="text-xl md:text-2xl font-semibold text-red-700 mb-2">
             Premium Facial Tissue, Trusted Quality
           </p>
-          <p className="max-w-4xl text-gray-600 text-lg md:text-xl leading-7">
+          <p className="max-w-4xl text-gray-600 text-lg md:text-xl leading-6 md:leading-7">
             At Matrix Tissue, we go beyond just manufacturing facial tissue. We
             are committed to delivering exceptional value through quality,
             consistency, and a customer-first approach, making us a reliable
@@ -325,13 +329,13 @@ const Home = () => {
                   {feature.icon}
                 </div>
 
-                <h4 className="text-lg md:text-xl font-bold text-gray-900">
+                <h4 className="text-[23px] md:text-xl font-bold text-gray-900">
                   {feature.title}
                 </h4>
               </div>
 
               {/* DESCRIPTION */}
-              <p className="text-gray-600 leading-6 md:leading-7 text-sm md:text-base">
+              <p className="text-gray-600 leading-5 md:leading-7 text-sm md:text-base">
                 {feature.desc}
               </p>
             </div>
@@ -340,7 +344,7 @@ const Home = () => {
       </section>
 
       {/* cta section  */}
-      <section className="relative w-full py-20 md:py-32 flex items-center justify-center overflow-hidden lg:py-6">
+      <section className="relative w-full py-9 md:py-32 flex items-center justify-center overflow-hidden lg:py-6">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -354,10 +358,10 @@ const Home = () => {
 
         {/* Content */}
         <div className="relative z-10 text-center px-5 max-w-5xl text-white">
-          <h2 className="text-4xl md:text-7xl font-bebas mb-4  drop-shadow-md">
+          <h2 className="text-4xl md:text-7xl font-bebas mb-2 md:mb-4  drop-shadow-md">
             Searching for the Best Facial Tissue in Delhi?
           </h2>
-          <p className="text-lg md:text-3xl mb-6 font-medium text-gray-100 max-w-3xl mx-auto">
+          <p className="text-lg md:text-3xl mb-3 md:mb-6 font-medium text-gray-100 max-w-3xl mx-auto">
             Connect with Matrix Tissue for premium quality, competitive pricing,
             and reliable bulk supply.
           </p>
@@ -368,8 +372,8 @@ const Home = () => {
       </section>
 
       {/* why Buyer choose matrix tissue  */}
-      <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-6">
-        <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-7 text-center tracking-wide">
+      <section className="px-5 py-4 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-6">
+        <h2 className="text-4xl md:text-5xl font-bebas text-gray-900 mb-4 md:mb-7 text-center tracking-wide">
           Why Buyers Choose Matrix Tissue
         </h2>
 
@@ -377,7 +381,7 @@ const Home = () => {
           {whyBuyersChoose.map((item, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow group"
+              className="bg-white p-4 md:p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow group"
             >
               {/* ICON + TITLE */}
               <div className="flex items-center gap-3 mb-3">
@@ -385,13 +389,13 @@ const Home = () => {
                   {item.icon}
                 </div>
 
-                <h3 className="font-bold text-gray-900 text-base md:text-lg">
+                <h3 className="font-bold text-gray-900 text-[23px] md:text-lg">
                   {item.title}
                 </h3>
               </div>
 
               {/* DESCRIPTION */}
-              <p className="text-gray-600 text-sm md:text-base leading-6 md:leading-6">
+              <p className="text-gray-600 text-sm md:text-base leading-5 md:leading-6">
                 {item.desc}
               </p>
             </div>
@@ -400,19 +404,19 @@ const Home = () => {
       </section>
 
       {/* Also avaiable on  */}
-      <section className="px-5 py-12 md:py-20 lg:px-24 bg-white flex flex-col items-center lg:py-8">
+      <section className="px-5 py-6 md:py-20 lg:px-24 bg-white flex flex-col items-center lg:py-8">
         <div className="text-center ">
-          <h2 className="text-3xl md:text-5xl font-bebas text-gray-900  mb-3 tracking-wide">
+          <h2 className="text-5xl md:text-5xl font-bebas text-gray-900  mb-3 tracking-wide">
             Also Available On
           </h2>
-          <p className="text-xl md:text-2xl font-semibold text-red-700 mb-5">
+          <p className="text-xl md:text-2xl leading-6 md:leading-7 font-semibold text-red-700 mb-5">
             Matrix Tissue is proudly listed on leading B2B platforms, making it
             easier for buyers to connect with a trusted facial tissue
             manufacturer in Delhi.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-7 md:items-center lg:gap-5">
+        <div className="grid gap-11 grid-cols-2 md:grid-cols-7 md:items-center lg:gap-5">
           {[
             "/ecom2/logo1.webp",
             "/ecom2/logo2.webp",
@@ -435,35 +439,35 @@ const Home = () => {
       </section>
 
       {/* premium facial tissue collection  */}
-      <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-6">
+      <section className="px-5  md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-6">
         
 
-        <div className="bg-[##f9fafb] py-8 px-4 md:px-10">
+        <div className="bg-[##f9fafb]  py-6 md:py-8 px-4 md:px-10">
       
       {/* 🔥 TITLE */}
-      <h2 className="text-3xl md:text-6xl font-light text-center text-purple-700 mb-10">
+      <h2 className="text-5xl md:text-6xl font-light text-center text-purple-700 mb-10">
         Premium Selections
       </h2>
 
       {/* 🔥 GRID */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-2  lg:grid-cols-4 gap-3 md:gap-8 max-w-7xl mx-auto">
         
         {featuredproducts.map((item, index) => (
-          <div key={index} className="flex items-center gap-4">
+          <div key={index} className="flex flex-col md:flex-row items-center gap-1 md:gap-4">
             
             {/* IMAGE */}
-            <div className="w-[90px] h-[90px] rounded-xl overflow-hidden shadow-md">
+            <div className="w-[110px] h-[100px] rounded-xl overflow-hidden shadow-md">
               <Image
                 src={item.img}
                 alt={item.name}
                 width={90}
-                height={90}
-                className="w-full h-full object-contain"
+                height={100}
+                className="w-full h-full md:w-full md:h-full object-cover"
               />
             </div>
 
             {/* TEXT */}
-            <p className="text-md md:text-xl text-gray-800 leading-tight">
+            <p className="text-xl text-center md:text-start md:text-xl text-gray-800 leading-tight">
               {item.name}
             </p>
 
@@ -473,11 +477,11 @@ const Home = () => {
       </div>
     </div>
         {/* Bulk Supply CTA */}
-        <div className="mt-8 w-full max-w-5xl bg-gradient-to-r from-red-700 to-red-900 rounded-3xl p-6 md:p-8 text-center text-white shadow-xl">
-          <h3 className="text-3xl md:text-5xl font-bebas mb-3 tracking-wide">
+        <div className=" mt-4 md:mt-8 w-full max-w-5xl bg-gradient-to-r from-red-700 to-red-900 rounded-3xl p-6 md:p-8 text-center text-white shadow-xl">
+          <h3 className="text-3xl md:text-5xl font-bebas mb-2 md:mb-3 tracking-wide">
             Need Bulk Facial Tissue Supply?
           </h3>
-          <p className="text-lg md:text-xl mb-7 text-red-50 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl leading-6 md:leading-7 mb-2 md:mb-7 text-red-50 max-w-3xl mx-auto">
             Partner with a reliable facial tissue manufacturer in Delhi NCR for
             consistent quality and timely delivery.
           </p>
@@ -497,8 +501,8 @@ const Home = () => {
       
 
       {/* testimonial section  */}
-      <section className="px-5 py-12 md:py-20 lg:px-24 bg-white flex flex-col items-center lg:py-6">
-        <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-8 text-center tracking-wide">
+      <section className="px-5 py-5 md:py-20 lg:px-24 bg-white flex flex-col items-center lg:py-6">
+        <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-4 md:mb-8 text-center tracking-wide">
           What Our Clients Say
         </h2>
 
@@ -579,8 +583,8 @@ const Home = () => {
       </section>
 
       {/* Faq section  */}
-      <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-6">
-        <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-8  text-center tracking-wide">
+      <section className="px-5 py-4 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-6">
+        <h2 className="text-4xl md:text-5xl font-bebas text-gray-900 mb-4 md:mb-8  text-center tracking-wide">
           Frequently Asked Questions – Face Tissue
         </h2>
 
@@ -596,7 +600,7 @@ const Home = () => {
                   onClick={() => setActiveIndex(isOpen ? null : index)}
                   className="w-full flex items-center justify-between p-5 md:p-5 text-left hover:bg-red-50/30 transition-colors"
                 >
-                  <span className="font-bold text-gray-900 text-lg md:text-xl pr-4">
+                  <span className="font-bold text-gray-900 leading-6 text-lg md:text-xl pr-4">
                     {faq.question}
                   </span>
                   <ChevronDown
@@ -610,7 +614,7 @@ const Home = () => {
                     isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <div className="p-5 md:p-5 pt-0 text-gray-600 leading-6 text-base md:text-lg border-t border-gray-100">
+                  <div className="p-5 md:p-5 pt-0 text-gray-600 leading-5 md:leading-6 text-base md:text-lg border-t border-gray-100">
                     {faq.answer}
                   </div>
                 </div>
@@ -621,7 +625,7 @@ const Home = () => {
       </section>
 
       {/* Inquiry Form Section */}
-     
+     <EnquiryForm totalwords={totalwords} />
      
     </div>
     </>

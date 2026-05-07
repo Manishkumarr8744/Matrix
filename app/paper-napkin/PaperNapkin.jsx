@@ -23,11 +23,16 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Form from "../components/Form";
 import { FaWhatsapp } from "react-icons/fa";
+import Link from "next/link";
+import EnquiryForm from "../components/EnquiryForm";
+import { usePathname } from "next/navigation";
 
 
 const PaperNapkin = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [open, setOpen] = useState(false);
+    const path = usePathname();
+    const totalwords = path.split("/")[1].split("-");
   
 
   return (
@@ -39,7 +44,7 @@ const PaperNapkin = () => {
         <p className="font-bebas text-2xl text-white md:text-4xl">
           Searching for the Best
         </p>
-        <p className="font-teko text-4xl text-white md:text-6xl">
+        <p className="font-teko text-5xl text-white md:text-6xl">
           Paper Napkin in Delhi?
         </p>
         <p className="font-open text-center text-white md:text-xl ">
@@ -47,7 +52,7 @@ const PaperNapkin = () => {
           restaurants, and bulk use.
         </p>
 
-        <div className="grid grid-cols-3 mt-5 gap-3 text-white md:gap-8 md:mt-5">
+        <div className="grid grid-cols-3 mt-3 gap-3 text-white md:gap-8 md:mt-5">
           <div className="flex flex-col items-center gap-0.5 ">
             <BookCheck className="md:h-9 md:w-9" />
             <p className="md:text-xl">SEND REQUIREMENT</p>
@@ -63,19 +68,19 @@ const PaperNapkin = () => {
         </div>
 
         <div className="flex gap-5 mt-3 md:gap-14 pb-2">
-          <button onClick={()=>setOpen(!open)}  className="bg-red-500 hover:bg-red-600 px-5 py-1 rounded text-white text-xl md:scale-115">
+          <button onClick={()=>setOpen(true)}  className="bg-red-500 hover:bg-red-600 px-5 py-1 rounded text-white text-xl md:scale-115">
             Get Free Quote
           </button>
-          <button className="bg-red-500 hover:bg-red-500 px-5 py-1 rounded text-white text-xl md:scale-115">
+          <Link href={"https://matrixtissues.com/contact-us/"} className="bg-red-500 hover:bg-red-500 px-5 py-1 rounded text-white text-xl md:scale-115">
             Contact Us
-          </button>
+          </Link>
         </div>
       </section>
       
 
       {/* product section done */}
-      <section className="px-3 py-10 md:py-14 lg:px-20 flex flex-col items-center lg:py-6">
-        <p className="text-3xl md:text-5xl font-bebas text-gray-900 mb-4 text-center tracking-wide">
+      <section className="px-3 py-5 md:py-14 lg:px-20 flex flex-col items-center lg:py-6">
+        <p className="text-4xl md:text-5xl font-bebas text-gray-900 mb-2 md:mb-4 text-center tracking-wide">
           Our Paper Napkin Collection
         </p>
         <div className="grid grid-cols-2 gap-2 mt-2 md:grid-cols-4 lg:gap-6">
@@ -103,19 +108,19 @@ const PaperNapkin = () => {
           ))}
         </div>
 
-        <button className="mt-7 bg-red-700 text-white px-8 py-2 rounded text-xl md:scale-110 lg:px-20 lg:text-2xl">
+        <Link href="https://matrixtissues.com/product-category/paper-napkin/" className="mt-4 md:mt-7 bg-red-700 text-white px-8 py-2 rounded text-xl md:scale-110 lg:px-20 lg:text-2xl">
           SHOW MORE
-        </button>
+        </Link>
       </section>
 
       {/* cta done  */}
-      <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-6">
+      <section className="px-5  md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-6">
         {/* Bulk Supply CTA */}
         <div className="mt-8 w-full max-w-5xl bg-gradient-to-r from-red-700 to-red-900 rounded-3xl p-8 md:p-8 text-center text-white shadow-xl">
-          <h3 className="text-3xl md:text-5xl font-bebas mb-2 tracking-wide">
+          <h3 className="text-4xl md:text-5xl font-bebas md:mb-2 tracking-wide">
             Get Best Price for Paper Napkins
           </h3>
-          <p className="text-lg md:text-xl mb-8 text-red-50 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl mb-4 md:mb-8 text-red-50 max-w-3xl mx-auto">
             Looking for high-quality paper napkins in bulk?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -125,56 +130,56 @@ const PaperNapkin = () => {
             <a
               href="https://wa.link/rt47ko"
               target="_blank"
-              className="w-full sm:w-auto flex justify-center items-center gap-1 bg-transparent border-2 border-white text-white font-bold py-3 px-10 rounded-xl text-lg hover:bg-white/10 transition-colors"
+              className="w-full sm:w-auto flex justify-center items-center gap-1 md:gap-2 bg-transparent border-2 border-white text-white font-bold py-1 md:py-3 px-10 rounded-xl text-lg hover:bg-white/10 transition-colors"
             >
-              <FaWhatsapp/> WhatsApp Quote Available
+              <FaWhatsapp className="text-[50px] md:text-[40px]"/> WhatsApp Quote Available
             </a>
           </div>
         </div>
       </section>
 
       {/* third section done */}
-      <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-6">
-        <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-4 text-center tracking-wide">
+      <section className="px-5 py-8 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-6">
+        <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-3 md:mb-4 text-center tracking-wide">
           Paper Napkin in Delhi
         </h2>
-        <div className="max-w-5xl text-center space-y-4">
-          <p className="text-lg md:text-2xl text-gray-700 leading-7">
+        <div className="max-w-5xl text-center space-y-3 md:space-y-4">
+          <p className="text-md md:text-2xl text-black leading-6 md:leading-7">
             Matrix Tissue started its journey in 2008 under the leadership of
             Mr. Praveen Bhagwat with a vision to deliver high-quality hygiene
             products. Today, we are a recognized{" "}
-            <span className="font-bold">
+            
               paper napkin manufacturer in Delhi
-            </span>
+            
             , offering a wide range of premium{" "}
-            <span className="font-bold">paper napkin products</span> known for
+            paper napkin products  known for
             their softness, strength, and superior absorbency. Our products are
             widely used across restaurants, hotels, offices, and catering
             businesses, making us a reliable choice for{" "}
-            <span className="font-bold">paper napkin supply in Delhi.</span>
+           paper napkin supply in Delhi.
           </p>
 
-          <p className="text-lg md:text-2xl text-gray-700 leading-7">
+          <p className="text-lg md:text-2xl text-black leading-6 md:leading-7">
             With years of experience and a strong focus on quality, Matrix
             Tissue has become a trusted{" "}
-            <span className="font-bold">paper napkin supplier in Delhi</span>{" "}
+            paper napkin supplier in Delhi{" "}
             for both retail and bulk requirements. We specialize in delivering{" "}
-            <span className="font-bold">customized paper napkins,</span>{" "}
+             customized paper napkins,{" "}
             eco-friendly solutions, and consistent bulk supply to meet diverse
             business needs. Our commitment to hygiene, timely delivery, and
             competitive pricing makes us a preferred partner for businesses
             looking for the best
-            <span className="font-bold">paper napkin in Delhi.</span>
+            paper napkin in Delhi.  
           </p>
         </div>
       </section>
 
       {/* fouth section done  */}
-      <section className="px-3 py-10 md:py-14 lg:px-20 flex flex-col items-center lg:py-6">
+      <section className="px-3 py-5 md:py-14 lg:px-20 flex flex-col items-center lg:py-6">
         <p className="text-3xl md:text-5xl font-bebas text-gray-900 mb-2 text-center tracking-wide">
           Best-Selling Paper Napkins in Delhi
         </p>
-        <p className="text-xl md:text-2xl font-semibold text-red-700 mb-4">
+        <p className="text-xl text-center md:text-start md:text-2xl font-semibold leading-6 md:leading-7 text-red-700  md:mb-4">
           Explore our most popular paper napkin products trusted by businesses
           across Delhi NCR for quality and reliability.
         </p>
@@ -204,15 +209,15 @@ const PaperNapkin = () => {
       </section>
 
       {/* Why Choose Section done */}
-      <section className="px-5 py-12 md:py-20 lg:px-24 bg-white flex flex-col items-center lg:py-6">
+      <section className="px-5 py-5 md:py-20 lg:px-24 bg-white flex flex-col items-center lg:py-6">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-1 tracking-wide">
             Why Choose Our Paper Napkins
           </h2>
-          <p className="text-xl md:text-2xl font-semibold text-red-700 mb-4">
+          <p className="text-xl md:text-2xl font-semibold text-red-700 mb-1 md:mb-4">
             Quality You Can Trust, Supply You Can Rely On
           </p>
-          <p className="max-w-4xl text-gray-600 text-lg md:text-xl leading-7">
+          <p className="max-w-4xl text-gray-600 text-lg md:text-xl leading-6 md:leading-7">
             At Matrix Tissue, we go beyond just supplying{" "}
             <span className="font-bold">paper napkins.</span> We focus on
             delivering consistent quality, hygiene, and value, making us a
@@ -225,17 +230,17 @@ const PaperNapkin = () => {
           {whyChooseUsPaperNapkin.map((feature, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="flex flex-col items-start md:items-center text-center p-4 md:p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               <div className="flex justify-center items-center gap-2">
               <div className="mb-3 p-2 bg-white rounded-full shadow-sm">
                 {feature.icon}
               </div>
-              <h4 className="text-xl font-bold text-start text-gray-900 mb-3">
+              <h4 className="md:text-xl text-xl font-bold text-start text-gray-900 mb-3">
                 {feature.title}
               </h4>
               </div>
-              <p className="text-gray-600 leading-7 md:text-xl">
+              <p className="text-gray-600 leading-6 md:leading-7 md:text-xl">
                 {feature.desc}
               </p>
             </div>
@@ -244,13 +249,13 @@ const PaperNapkin = () => {
       </section>
 
 
-        <section className="px-5 py-12 md:py-20 lg:px-24  flex flex-col items-center lg:py-6">
+        <section className="px-5 py-4 md:py-20 lg:px-24  flex flex-col items-center lg:py-6">
          
         <div className="mt-3 w-full max-w-5xl bg-gradient-to-r from-red-700 to-red-900 rounded-3xl p-6 md:p-6 text-center text-white shadow-xl">
-          <h3 className="text-3xl md:text-5xl font-bebas mb-2 tracking-wide">
+          <h3 className="text-4xl md:text-5xl font-bebas mb-2 tracking-wide">
             Need Bulk Paper Napkin Supply?
           </h3>
-          <p className="text-lg md:text-xl mb-6 text-red-50 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl mb-4 md:mb-6 text-red-50 max-w-3xl mx-auto leading-6 md:leading-7">
             Partner with a reliable paper napkin manufacturer in Delhi NCR for
             consistent quality and timely delivery.
           </p>
@@ -271,8 +276,8 @@ const PaperNapkin = () => {
     
 
       {/* why Buyer choose matrix tissue done*/}
-      <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-8">
-        <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-12 text-center tracking-wide">
+      <section className="px-5 py-6 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-8">
+        <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-5 md:mb-12 text-center tracking-wide">
           Why Buyers Choose Matrix Tissue
         </h2>
 
@@ -280,17 +285,17 @@ const PaperNapkin = () => {
           {whyBuyersChoose.map((item, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow group"
+              className="bg-white p-3 md:p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col items-start md:items-center text-center hover:shadow-md transition-shadow group"
             >
               <div className="flex justify-center items-center gap-1">
               <div className="mb-4 bg-red-50 p-2 rounded-full group-hover:bg-red-100 transition-colors">
                 {item.icon}
               </div>
-              <h3 className="font-bold text-gray-900 text-start text-lg mb-2">
+              <h3 className="font-bold text-gray-900 text-start text-xl md:text-lg mb-2">
                 {item.title}
               </h3>
               </div>
-              <p className="text-gray-600 text-sm leading-7 md:text-xl">
+              <p className="text-gray-600 text-sm leading-6 md:leading-7 md:text-xl">
                 {item.desc}
               </p>
             </div>
@@ -299,42 +304,42 @@ const PaperNapkin = () => {
       </section>
 
       {/* Also avaiable on  done */}
-      <section className="px-5 py-12 md:py-20 lg:px-24 bg-white flex flex-col items-center lg:py-6">
-        <div className="text-center ">
-          <h2 className="text-3xl md:text-5xl mb-1 font-bebas text-gray-900  tracking-wide">
-            Also Available On
-          </h2>
-          <p className="text-xl md:text-2xl font-semibold text-red-700 mb-6">
-            Matrix Tissue is proudly listed on leading platforms, making it easy
-            to connect with a trusted{" "}
-            <span className="font-bold">paper napkin supplier in Delhi.</span>
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-7 md:items-center lg:gap-5">
-          {[
-            "/ecom2/logo1.webp",
-            "/ecom2/logo2.webp",
-            "/ecom2/logo4.webp",
-            "/ecom2/logo5.webp",
-            "/ecom2/logo8.webp",
-            "/ecom2/logo.webp",
-            "/ecom2/cropped-matrix-logo-Photoroom-2.png",
-          ].map((feature, index) => (
-            <Image
-              src={feature}
-              alt="image of ecom"
-              width={1000}
-              height={1000}
-              key={index}
-              className="h-28 w-28 "
-            />
-          ))}
-        </div>
-      </section>
+     <section className="px-5 py-6 md:py-20 lg:px-24 bg-white flex flex-col items-center lg:py-8">
+             <div className="text-center ">
+               <h2 className="text-5xl md:text-5xl font-bebas text-gray-900  mb-3 tracking-wide">
+                 Also Available On
+               </h2>
+               <p className="text-xl md:text-2xl leading-6 md:leading-7 font-semibold text-red-700 mb-5">
+                 Matrix Tissue is proudly listed on leading B2B platforms, making it
+                 easier for buyers to connect with a trusted facial tissue
+                 manufacturer in Delhi.
+               </p>
+             </div>
+     
+             <div className="grid gap-11 grid-cols-2 md:grid-cols-7 md:items-center lg:gap-5">
+               {[
+                 "/ecom2/logo1.webp",
+                 "/ecom2/logo2.webp",
+                 "/ecom2/logo4.webp",
+                 "/ecom2/logo5.webp",
+                 "/ecom2/logo8.webp",
+                 "/ecom2/logo.webp",
+                 "/ecom2/cropped-matrix-logo-Photoroom-2.png",
+               ].map((feature, index) => (
+                 <Image
+                   src={feature}
+                   alt="image of ecom"
+                   width={1000}
+                   height={1000}
+                   key={index}
+                   className="h-28 w-28 "
+                 />
+               ))}
+             </div>
+           </section>
 
       {/* premium facial tissue collection done */}
-      <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-6">
+      <section className="px-5 py-5 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-6">
         <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-4 text-center tracking-wide">
           Premium Paper Napkin Collection
         </h2>
@@ -379,16 +384,16 @@ const PaperNapkin = () => {
               className="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-md transition-all group cursor-pointer"
             >
               <div>
-                <h3 className="font-bold text-gray-900 text-lg mb-2 group-hover:text-red-700 transition-colors">
+                <h3 className="font-bold text-gray-900 text-xl mb-2 group-hover:text-red-700 transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-6 mb-4 md:text-lg">
+                <p className="text-gray-600 text-md leading-5 md:leading-6 mb-4 md:text-lg">
                   {item.desc}
                 </p>
               </div>
-              <span className="text-red-600 font-semibold text-sm inline-flex items-center gap-1">
+              <a href="https://matrixtissues.com/product-category/paper-napkin/" className="text-red-600 font-semibold text-md inline-flex items-center  gap-1">
                 View Collection →
-              </span>
+              </a>
             </div>
           ))}
         </div>
@@ -397,7 +402,7 @@ const PaperNapkin = () => {
       </section>
 
       {/* cta section done */}
-      <section className="relative w-full py-20 md:py-32 flex items-center justify-center overflow-hidden lg:py-5">
+      <section className="relative w-full py-6 md:py-32 flex items-center justify-center overflow-hidden lg:py-5">
         <div className="absolute inset-0 z-0">
           <Image
             src="/products/FT7-1-1.webp"
@@ -412,18 +417,18 @@ const PaperNapkin = () => {
           <h2 className="text-4xl md:text-7xl font-bebas mb-3 tracking-wider drop-shadow-md">
             Need Bulk Paper Napkins at the Best Price?
           </h2>
-          <p className="text-lg md:text-3xl mb-4 font-medium text-gray-100 max-w-3xl mx-auto">
+          <p className="text-lg md:text-3xl mb-4 font-medium text-gray-100 max-w-3xl mx-auto leading-6 md:leading-7">
             Connect with Matrix Tissue today and get high-quality paper napkins
             with fast delivery and unbeatable pricing.
           </p>
-          <button onClick={()=>setOpen(!open)}  className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-12 rounded-xl text-xl md:text-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
+          <button onClick={()=>setOpen(true)}  className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-12 rounded-xl text-xl md:text-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
             Request Quote Now
           </button>
         </div>
       </section>
 
       {/* testimonial section  */}
-      <section className="px-5 py-12 md:py-20 lg:px-24 bg-white flex flex-col items-center lg:py-6">
+      <section className="px-5 py-5 md:py-20 lg:px-24 bg-white flex flex-col items-center lg:py-6">
         <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-7 text-center tracking-wide">
           Trusted by Businesses Across Delhi NCR
         </h2>
@@ -463,7 +468,7 @@ const PaperNapkin = () => {
       </section>
 
       {/* Faq section  */}
-      <section className="px-5 py-12 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-6">
+      <section className="px-5 py-5 md:py-20 lg:px-24 bg-gray-50 flex flex-col items-center lg:py-6">
         <h2 className="text-3xl md:text-5xl font-bebas text-gray-900 mb-8 text-center tracking-wide">
           Frequently Asked Questions – Paper Napkin
         </h2>
@@ -500,7 +505,7 @@ const PaperNapkin = () => {
             isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="p-5 md:p-6 pt-0 text-gray-600 leading-6 text-base md:text-lg border-t border-gray-100">
+          <div className="p-5 md:p-6 pt-0 text-gray-600 leading-6 text-base leading-6 md:leading-7 md:text-lg border-t border-gray-100">
             {faq.answer}
           </div>
         </div>
@@ -515,6 +520,7 @@ const PaperNapkin = () => {
 
      
     </div>
+    <EnquiryForm totalwords={totalwords} />
     </>
 
   );
